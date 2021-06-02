@@ -3,6 +3,7 @@
 var express = require('express');
 var ArticleController = require('../controllers/article');
 
+
 var router = express.Router();
 var multipart = require('connect-multiparty');
 var md_upload = multipart({ uploadDir: 'upload/articles' });
@@ -10,6 +11,11 @@ var md_upload = multipart({ uploadDir: 'upload/articles' });
 //Rutas de prueba
 router.get('/test-de-controlador', ArticleController.test);
 router.post('/datos-curso', ArticleController.datosCurso);
+
+
+/* router.get('/private', auth.isAuth, function(req, res) {
+	res.status(200).send({ message: 'Tienes acceso' })
+}) */
 
 //Rutas útiles
 router.post('/save', ArticleController.save);

@@ -1,0 +1,27 @@
+@use '../../../assets/css/base';
+//Variables
+$color: #ce1e1e;
+$borde: 1px solid $color;
+$fondo: #c25454;
+$sombra: 5px 5px $color;
+$sombraTexto: 0px 0px 2px $color;
+#menu {
+    a:hover,
+    .active {
+        color: $color;
+        border-bottom: 5px solid $color;
+    }
+    ul {
+        li:hover {
+            transform: scale(1.2, 1.2);
+            text-shadow: 2px 2px 2px $color;
+            color: $color;
+        }
+    }
+}
+
+.enlaceMenuH:hover {
+    transform: scale(1.2, 1.2);
+    text-shadow: 2px 2px 2px $color;
+    color: $color;
+}
